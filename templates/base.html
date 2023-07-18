@@ -20,11 +20,11 @@
                     <div class="sidebar">
                         <h2>Sidebar</h2>
                         <ul>
-                            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-                            <li><a href="#"><i class="fas fa-user"></i>{{user.username}}username:</a></li>
-                            <li><a href="#"><i class="fa-solid fa-school"></i>{{user.username}}school:</a></li>
+                            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="#"><i class="fas fa-user"></i> Username:{{user.username}}</a></li>
+                            <li><a href="#"><i class="fa-solid fa-school"></i> School:{{user.username}}</a></li>
                             <hr>
-                            <li><a href="#"><i class="fa-solid fa-key"></i>View Keys</a></li>
+                            <li><a href="{% url 'access-key-list' %}"><i class="fa-solid fa-key"></i> View Keys</a></li>
 
                         </ul> 
                     </div>
@@ -34,5 +34,8 @@
             {% block main_content %}
                 
             {% endblock %}
+
+    
+  {% endblock %} 
     </body>
 </html>
