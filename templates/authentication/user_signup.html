@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 
 {% block main_content %}
-    <h2>
-        Sign Up as a Personnel for your school
-    </h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p}}
-    </form>
+    <div class="main_content">
+        <div class="header">
+            Sign in School Personnel
+        </div>
+        <div class="info">
+            <div>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                </form>
+            </div>
+        </div>
+    </div>
     
-
+    
 {% endblock %}
