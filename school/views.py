@@ -20,6 +20,9 @@ class AccessKeysListView(ListView):
     paginate_by = 10
     template_name = "school/access_key_list.html"
     context_object_name = "access_key_list"
+    
+    class Meta:
+        ordering=['id']
 
 
 # def all_access_keys(request, id_of_school):
@@ -31,21 +34,21 @@ class AccessKeysListView(ListView):
 class AccessKeysDetailView(DetailView):
     model = AccessKey
     template_name = "access_key_detail.html"
-    context_object_name = "access_key"
-    
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["accesskey_detail"] = AccessKey.object.all()
-    #     return context
+    context_object_name = "access_key_detail"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["accesskey_list"] = AccessKey.object.all()
+        return context
 
 
-# class FilterAccessKeys(generic.ListView):
-#     model = AccessKey
-#     paginate_by = 10
+class FilterAccessKeys(generic.ListView):
+    model = AccessKey
+    paginate_by = 10
 
-#     def get_queryset(self):
-#         context_object_name = "filter_list"
-#         return AccessKey.objects.filter(status=self.kwargs["status"])
+    def get_queryset(self):
+        context_object_name = "filter_list"
+        return AccessKey.objects.filter(status=self.kwargs["status"])
 
 
 # class FilterAccessKeys(APIView):
