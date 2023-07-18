@@ -12,6 +12,7 @@ import uuid
 from school.models import School
 
 
+
 # Create your models here.
 class AccessKey(models.Model):
     class AccessKeyStatus(models.TextChoices):
