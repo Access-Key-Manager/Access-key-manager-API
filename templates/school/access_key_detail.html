@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <div class="main_content">
+        <div class="header">
+            {{access_key.id}} : {{access_key.status}}
+        </div>
+        <div class="info">
+            <div>
+                Token: {{access_key.token}}
+                <br>
+                Key duration: {{access_key.key_duration}}
+                <br>
+                Procurement date: {{access_key.procurement_date}} 
+                <br>
+                Expiry date: {{access_key.expiry_date}}
+                <br>
+            </div>
+        </div>
+    
+    </div>
+{% endblock %}

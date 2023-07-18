@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <div class="main_content">
+        <div class="header">
+            Sign Your School Up
+        </div>
+        <div class="info">
+            <div>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+{% endblock %}

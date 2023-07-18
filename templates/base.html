@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block title %}
+            <title>
+                Access Key Manager
+            </title>
+        {% endblock %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <script src="https://kit.fontawesome.com/bac258e77e.js"></script>
+
+    </head>
+    <body>
+        
+            <div class="wrapper">
+                {% block sidebar %}
+                    <div class="sidebar">
+                        <h2>Sidebar</h2>
+                        <ul>
+                            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i>Home</a></li>
+                            <li><a href="#"><i class="fas fa-user"></i> Username:{{user.username}}</a></li>
+                            <li><a href="#"><i class="fa-solid fa-school"></i> School:{{user.username}}</a></li>
+                            <hr>
+                            <li><a href="{% url 'access-key-list' %}"><i class="fa-solid fa-key"></i> View Keys</a></li>
+
+                        </ul> 
+                    </div>
+                {% endblock %}
+            </div>
+        
+            {% block main_content %}
+                
+            {% endblock %}
+
+    
+ 
+    </body>
+</html>

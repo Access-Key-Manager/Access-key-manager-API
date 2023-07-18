@@ -21,6 +21,9 @@ class AccessKeysListView(ListView):
     template_name = "school/access_key_list.html"
     context_object_name = "access_key_list"
 
+    class Meta:
+        ordering = ["id"]
+
 
 # def all_access_keys(request, id_of_school):
 #     school = get_object_or_404(School, pk=id_of_school)

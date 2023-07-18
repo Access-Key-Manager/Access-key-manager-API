@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<div class="main_content">
+    <div class="header">
+        My Access Keys
+    </div>
+    <div class="info">
+        <div>
+            {% if access_key_list %}
+                <table>
+                    <tr>
+                        <td>
+                            ID
+                        </td>
+                        <td>
+                            Key Duration
+                        </td>
+                        <td>
+                            Status
+                        </td>
+                    </tr>
+                {% for access_key in access_key_list %}
+                    <tr>
+                        <td>
+                            {{key.id}}
+                        </td>
+                        <td>
+                            {{key.key_duration}}
+                        </td>
+                        <td>
+                            {{key.status}}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </table>
+                
+            {% else %}
+                You currently have no access keys
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+ 
+{% endblock %}
