@@ -21,7 +21,7 @@ body{
 
 .wrapper .sidebar{
     position: fixed;
-    width: 200px;
+    width: 15%;
     height: 100%;
     background: #4b4276 ;
     padding: 30px 0;
@@ -58,7 +58,7 @@ body{
 }
 
 .main_content{
-    width: 100%;
+    width: 84%;
     margin-left: 210px;
 
 }
@@ -82,17 +82,23 @@ border-bottom: 1px solid #e0e4e8;
 
 
 .main_content .info .p_keys{
-    margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
 }
 
+
+.main_content .info .p_keys h2{
+    color: #4b4276;
+    text-align: center;
+  }
+
 .main_content .info .p_keys .wrapper1{
-    width: auto;
-    margin-top: 120px;
+    width: 100;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -115,27 +121,28 @@ border-bottom: 1px solid #e0e4e8;
 }
 
 .main_content .info .p_keys .wrapper1 .item.item_1 h3{
-    color: #69b0bb;
+    color: #4b4276;
   }
 
 .main_content .info .p_keys .wrapper1 .item.item_2 h3{
-color: #f4581b;
+color: #4b4276;
 }
 
 .main_content .info .p_keys .wrapper1 .item.item_3 h3{
-    color: #504b5a;
+    color: #4b4276;
   }
 
 .main_content .info .p_keys .wrapper1 .item img{
     display: block;
-    width: 160px;
-    margin: 10px auto;
+    width: 60px;
+    height:60px;
+    margin:10px auto;
   }
 
 
 .main_content .info .p_keys .wrapper1 .item .description p{
     font-size: 10px;
-    color: #a3a3a3;
+    color: #504b5a;
     margin-bottom: 5px;
   }
 .main_content .info .p_keys .wrapper1 .item .price{
@@ -157,15 +164,15 @@ color: #f4581b;
     border-top-right-radius: 5px; 
   }
 .main_content .info .p_keys .wrapper1 .item.item_1 .btn{
-    background: #69b0bb;
+    background: #4b4276;
   }
 
 .main_content .info .p_keys .wrapper1 .item.item_2 .btn{
-    background: #f4581b;
+    background: #4b4276;
   }
 
 .main_content .info .p_keys .wrapper1 .item.item_3 .btn{
-    background: #504b5a;
+    background: #4b4276;
   }
   
 .main_content .info .p_keys .wrapper1 .item .btn a{
