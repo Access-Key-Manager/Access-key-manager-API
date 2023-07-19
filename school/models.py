@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -25,12 +24,3 @@ class School(models.Model):
     @property
     def all_access_keys(self):
         return self.access_keys.all()
-
-
-class SchoolITPersonnel(models.Model):
-    user = models.OneToOneField(
-        User, on_delete=models.CASCADE, related_name="it_personnel"
-    )
-    school = models.ForeignKey(
-        School, on_delete=models.CASCADE, related_name="it_personnel"
-    )

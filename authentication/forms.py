@@ -2,8 +2,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.core.exceptions import ValidationError
-from school.models import School, SchoolITPersonnel
+from school.models import School
+from users.models import SchoolITPersonnel
 from django.utils.translation import gettext_lazy as _
+
+# todo: move this to the users app, it should handle all things related to users
 
 
 class SignUpForm(UserCreationForm):
