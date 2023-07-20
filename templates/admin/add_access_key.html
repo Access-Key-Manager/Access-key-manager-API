@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Access Key</title>
+  </head>
+  <body>
+    <h1>Add Access Key</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="key_name">Key Name:</label>
+      <input type="text" id="key_name" name="key_name" required />
+      <label for="date_of_procurement">Date of Procurement:</label>
+      <input
+        type="date"
+        id="date_of_procurement"
+        name="date_of_procurement"
+        required
+      />
+      <label for="expiry_date">Expiry Date:</label>
+      <input type="date" id="expiry_date" name="expiry_date" required />
+      <button type="submit">Add Key</button>
+    </form>
+  </body>
+</html>

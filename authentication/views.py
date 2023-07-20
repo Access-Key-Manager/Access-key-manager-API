@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from authentication.forms import SchoolSignUpForm, SignUpForm
-from school.models import SchoolITPersonnel
+from users.models import SchoolITPersonnel
 
 # Create your views here.
+# todo: Move all things related to authentication and the users
+# this has to do with admins, it personnels and any actor who is
+# a user to the 'users' model'
 
 
 def user_sign_up(request):

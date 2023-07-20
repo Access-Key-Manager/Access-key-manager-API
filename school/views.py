@@ -20,9 +20,9 @@ class AccessKeysListView(ListView):
     paginate_by = 10
     template_name = "school/access_key_list.html"
     context_object_name = "access_key_list"
-    
+
     class Meta:
-        ordering=['id']
+        ordering = ["id"]
 
 
 # def all_access_keys(request, id_of_school):

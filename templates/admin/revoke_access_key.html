@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Revoke Access Key</title>
+  </head>
+  <body>
+    <h1>Revoke Access Key</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="key_id">Access Key ID:</label>
+      <input type="text" id="key_id" name="key_id" required />
+      <button type="submit">Revoke Key</button>
+    </form>
+  </body>
+</html>
