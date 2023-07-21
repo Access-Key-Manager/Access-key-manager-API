@@ -10,9 +10,10 @@
                 <form  method="post">
                     {% csrf_token %}
                     {{ form.as_p}}
-                        <label for="Username">Username: </label>
+                        {% comment %} <label for="Username">Username: </label>
                         <input id="Username" type="text" name="user" value="{{ current_name }}">
-                        <input type="submit" value="OK">
+                        {% endcomment %}
+                        <input type="submit" value="Submit"> 
                     </form>
                 </form>
             </div>

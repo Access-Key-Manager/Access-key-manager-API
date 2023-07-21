@@ -79,3 +79,23 @@ border-bottom: 1px solid #e0e4e8;
 .main_content .info div{
     margin-bottom: 20px;
 }
+td{
+border: 2px solid;
+text-align: left;
+padding:30px;
+}
+ tr{
+    display: flex;
+    border: 2px solid;
+    text-align: left;
+    padding:30px;
+    margin-right: 10px;
+    }
+.table{
+    margin: 10px; 
+    border: 2px solid;
+    padding:30px;
+}
+.info{
+    padding: 20px;
+}

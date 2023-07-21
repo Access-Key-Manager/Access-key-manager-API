@@ -4,18 +4,16 @@
   <div class="info">
     <div>
       {% if access_key_list %}
-      <table>
-        <tr>
-          <td>ID</td>
-          <td>Key Duration</td>
-          <td>Status</td>
-        </tr>
-        {% for access_key in access_key_list %}
-        <tr>
-          <td>{{access_key.id}}</td>
-          <td>{{access_key.key_duration}}</td>
-          <td>{{access_key.status}}</td>
-        </tr>
+      <p>ID | Key Duration | Status | token</p>
+      {% for access_key in access_key_list %}
+      <table style="border: 1px solid">
+        <div style="border: 1px solid, display: flex, flex-direction: row">
+          <p style="padding: 10px">
+            {{access_key.id}} | {{access_key.key_duration}} |
+            {{access_key.status}} | {{access_key.token}}
+          </p>
+        </div>
+
         {% endfor %}
       </table>
 
