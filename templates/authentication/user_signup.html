@@ -7,9 +7,13 @@
         </div>
         <div class="info">
             <div>
-                <form method="post">
+                <form  method="post">
                     {% csrf_token %}
                     {{ form.as_p}}
+                        <label for="Username">Username: </label>
+                        <input id="Username" type="text" name="user" value="{{ current_name }}">
+                        <input type="submit" value="OK">
+                    </form>
                 </form>
             </div>
         </div>
