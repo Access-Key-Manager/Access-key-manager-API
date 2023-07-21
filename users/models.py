@@ -10,7 +10,7 @@ USER_MODEL = settings.AUTH_USER_MODEL
 class User(AbstractUser):
     # todo: add other fields that are not on AbstractUser
     email = models.EmailField(_("Email Address"), blank=False, null=False, unique=True)
-    USERNAME_FIELD = "email"
+    USERNAME_FIELD = "username"
     REQUIRED_FIELDS = []
 
     def __str__(self) -> str:
