@@ -18,15 +18,25 @@
             <div class="wrapper">
                 {% block sidebar %}
                     <div class="sidebar">
-                        <h2>Sidebar</h2>
+                        
+                        {% if user.is_authenticated %}
+                            <h2>AKM</h2>
+                            <ul>
+                                <li><a href="{% url 'index' %}"><i class="fas fa-home"></i>Home</a></li>
+                                <li><a href="#"><i class="fas fa-user"></i> {{user.username}}</a></li>
+                                <li><a href="#"><i class="fa-solid fa-school"></i> {{user.school}}</a></li>
+                                <hr>
+                                <li><a href="{% url 'access-key-list' %}"><i class="fa-solid fa-key"></i> View Keys</a></li>
+                                <hr>
+                                <li><a href="{% url 'logout' %}"></i>Logout</a></li>
+
+                            </ul>
+                        {% else %}
                         <ul>
                             <li><a href="{% url 'index' %}"><i class="fas fa-home"></i>Home</a></li>
-                            <li><a href="#"><i class="fas fa-user"></i> Username:{{user.username}}</a></li>
-                            <li><a href="#"><i class="fa-solid fa-school"></i> School:{{user.username}}</a></li>
-                            <hr>
-                            <li><a href="{% url 'access-key-list' %}"><i class="fa-solid fa-key"></i> View Keys</a></li>
-
-                        </ul> 
+                        </ul>
+                        {% endif %}
+                                                    
                     </div>
                 {% endblock %}
             </div>
